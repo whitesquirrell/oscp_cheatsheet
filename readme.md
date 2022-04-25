@@ -208,8 +208,10 @@ gobuster dir -e -u http://192.168.0.1 -w /usr/share/wordlists/dirbuster/director
 ```
 
 ### HTTPS
-
-*Set the `--insecuressl` flag.*
+-k, --no-tls-validation     Skip TLS certificate verification
+```bash
+gobuster dir -u https://192.168.138.136 -k -w all.txt
+```
 
 ***
 

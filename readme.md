@@ -214,6 +214,16 @@ gobuster dir -u https://192.168.138.136 -k -w all.txt
 ```
 
 ***
+## Feroxbuster
+
+### Port 80
+```bash
+feroxbuster --url http://192.168.235.87 --depth 4 --wordlist all.txt
+```
+### Other port
+```bash
+feroxbuster --url http://192.168.235.87:10000 --depth 4 --wordlist all.txt
+```
 
 ## SMBCLIENT
 

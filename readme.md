@@ -197,6 +197,7 @@ nmap -v -sS -p 445,139 -Pn --script smb-vuln* --script-args=unsafe=1 -oA smb_vul
 
 ```bash
 gobuster dir -e -u http://192.168.0.1 -w /usr/share/wordlists/dirb/big.txt -t 20
+gobuster dir -u http://192.168.0.1/ -w all.txt --wildcard | grep 200
 ```
 #### Fast Scan (Big List)
 
